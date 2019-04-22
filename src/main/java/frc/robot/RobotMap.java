@@ -27,6 +27,6 @@ public class RobotMap {
   public static final int BUTTON_LOWER_BARREL = 3;
 
   public static final int FILL_SOLENOID = 0;
-  public static final int FIRE_SOLENOID = 0;
+  public static final int FIRE_SOLENOID = 1;
   
 }
