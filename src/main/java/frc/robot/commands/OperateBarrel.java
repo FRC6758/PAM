@@ -25,8 +25,8 @@ public class OperateBarrel extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    boolean lower = OI.JOYSTICK.getRawButton(RobotMap.BUTTON_LOWER_BARREL);
-    boolean raise = OI.JOYSTICK.getRawButton(RobotMap.BUTTON_RAISE_BARREL);
+    boolean lower = OI.xbox.getXButton();
+    boolean raise = OI.xbox.getAButton();
     if(!lower && !raise) {
       Robot._BARREL.BARREL.set(0);
       return;

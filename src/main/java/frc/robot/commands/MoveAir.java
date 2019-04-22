@@ -7,6 +7,7 @@
 
 package frc.robot.commands;
 
+import edu.wpi.first.wpilibj.GenericHID.Hand;
 import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.OI;
 import frc.robot.Robot;
@@ -26,8 +27,8 @@ public class MoveAir extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    boolean fill = OI.JOYSTICK.getRawButton(RobotMap.BUTTON_FILL);
-    boolean fire = OI.JOYSTICK.getTrigger();
+    boolean fill = 0 < OI.xbox.getTriggerAxis(Hand.kRight);
+    boolean fire = 0 < OI.xbox.getTriggerAxis(Hand.kLeft);
 
     Robot._AIR.FILL_SOLENOID.set(fill);
     Robot._AIR.FIRE_SOLENOID.set(fire);

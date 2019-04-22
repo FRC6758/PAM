@@ -7,6 +7,7 @@
 
 package frc.robot.commands;
 
+import edu.wpi.first.wpilibj.GenericHID.Hand;
 import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.OI;
 import frc.robot.Robot;
@@ -24,7 +25,7 @@ public class Drive extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    Robot._DRIVETRAIN.DRIVETRAIN.arcadeDrive(OI.JOYSTICK.getX(), OI.JOYSTICK.getTwist());
+    Robot._DRIVETRAIN.DRIVETRAIN.arcadeDrive(OI.xbox.getX(Hand.kRight), OI.xbox.getY(Hand.kLeft));
   }
 
   // Make this return true when this Command no longer needs to run execute()
